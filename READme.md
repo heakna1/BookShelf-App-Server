@@ -35,4 +35,4 @@ Does your large collection of books overwhelm you? Do you want to read your unre
 
 ## ERD
 
-!["ERD"](../Images/ERD.png)
+!["ERD"](Images/ERD.png)
