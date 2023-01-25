@@ -1,0 +1,32 @@
+{
+  "name": "bookshelf-app-server",
+  "version": "1.0.0",
+  "description": "Does your large collection of books overwhelm you? Do you want to read your unread books before buying more? ShelfBuddi can help you achieve your reading goals. This app allows you to log your book collection into one place to categorize and organize as you read through your book shelf.",
+  "main": "Server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heakna1/BookShelf-App-Server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heakna1/BookShelf-App-Server/issues"
+  },
+  "homepage": "https://github.com/heakna1/BookShelf-App-Server#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.8.4",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1"
+  }
+}
