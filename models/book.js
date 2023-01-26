@@ -16,7 +16,8 @@ const bookSchema = new Schema(
         genre: {
 			type: String,
 			required: true
-		}
+		},
+        reviews: [reviewSchema]
 	},
 	{
         timestamps: true
