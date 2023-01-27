@@ -32,6 +32,7 @@ Does your large collection of books overwhelm you? Do you want to read your unre
 * As the user I want to be able to change the color scheme of my book shelf
 * As the user I was to be able to share my book reviews on social media
 * As the user I would like to be able to have a five-star rating system for book reviews
+* As the user I want to have a function where I can just scan the ISBN and it generates the book informtion
 
 ## ERD
 
