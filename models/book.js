@@ -17,16 +17,28 @@ const bookSchema = new Schema(
 			type: String,
 			required: true
 		},
+        isbn: {
+            type: Number,
+            required: true
+        },
         pageNumber: {
             type: Number,
             require: false
         },
+        bookCover: {
+            type: String,
+            required: false,
+            default: "",
+        },
         reviews: [reviewSchema]
 	},
 	{
-        timestamps: true
+        timestamps: true,
+        virtuals: true
     }
-)
+); 
+// http://covers.librarything.com/devkey/d73fa640c8f15f511af41c39a6965f49
+// /small/isbn/
 
 // mongosh collection characters
 const Book = mongoose.model('Book', bookSchema)
