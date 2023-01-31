@@ -18,7 +18,7 @@ const bookSchema = new Schema(
 			required: true
 		},
         isbn: {
-            type: Number,
+            type: String,
             required: true
         },
         pageNumber: {
@@ -28,17 +28,20 @@ const bookSchema = new Schema(
         bookCover: {
             type: String,
             required: false,
-            default: "",
+            default: "https://covers.openlibrary.org/b/isbn/"
         },
         reviews: [reviewSchema]
 	},
 	{
         timestamps: true,
-        virtuals: true
+        toObject: { virtuals: true },
+        toJSON: { virtuals: true }
     }
-); 
-// http://covers.librarything.com/devkey/d73fa640c8f15f511af41c39a6965f49
-// /small/isbn/
+);
+
+bookSchema.virtual('bookCoverUrl').get(function() {
+    return this.bookCover + this.isbn + "-M.jpg";
+  });
 
 // mongosh collection characters
 const Book = mongoose.model('Book', bookSchema)

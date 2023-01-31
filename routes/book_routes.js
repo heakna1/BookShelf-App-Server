@@ -6,7 +6,7 @@ const { handle404 } = require('../lib/custom-errors')
 // require the Model we just created
 const Book = require('../models/book')
 
-// Creating a router for us to make paths on
+// Creating a router to make paths on
 const router = express.Router()
 
 // INDEX
