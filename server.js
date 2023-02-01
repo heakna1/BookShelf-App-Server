@@ -9,7 +9,6 @@ const requestLogger = require('./lib/request-logger')
 const bookRoutes = require("./routes/book_routes")
 const reviewRoutes = require("./routes/review_routes")
 const userRoutes = require("./routes/user_routes")
-const bookSeed = require('./lib/book-seed')
 
 // deprecation warning
 mongoose.set('strictQuery', true)
@@ -32,7 +31,6 @@ app.use(requestLogger)
 app.use(bookRoutes)
 app.use(reviewRoutes)
 app.use(userRoutes)
-app.use('/seed', bookSeed)
 
 app.listen(PORT, () => {
     console.log('listening on ' + PORT)
