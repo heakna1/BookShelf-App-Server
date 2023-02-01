@@ -28,7 +28,7 @@ app.use(cors({ origin: `http://127.0.0.1:5500` }))
 app.use(express.json())
 app.use(requestLogger)
 
-// server needs to know about this router!!!
+// server needs to know about these routers
 app.use(bookRoutes)
 app.use(reviewRoutes)
 app.use(userRoutes)

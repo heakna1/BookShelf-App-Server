@@ -39,7 +39,7 @@ bookSchema.virtual('bookCoverUrl').get(function() {
     return this.bookCover + this.isbn + "-M.jpg";
   });
 
-// mongosh collection characters
+// mongosh collection books
 const Book = mongoose.model('Book', bookSchema)
 
 module.exports = Book

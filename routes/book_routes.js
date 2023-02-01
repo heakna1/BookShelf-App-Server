@@ -41,7 +41,7 @@ router.post('/books', (req, res, next) => {
 })
 
 // UPDATE
-// PATCH /books/5a7db6c74d55bc51bdf39793
+// PATCH /books/:id
 router.patch('/books/:id', (req, res, next) => {
 	Book.findById(req.params.id)
 		.then(handle404)
@@ -53,7 +53,7 @@ router.patch('/books/:id', (req, res, next) => {
 })
 
 // DESTROY
-// DELETE /books/5a7db6c74d55bc51bdf39793
+// DELETE /books/:id
 router.delete('/books/:id', (req, res, next) => {
 	Book.findById(req.params.id)
 		.then(handle404)
