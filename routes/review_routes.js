@@ -36,10 +36,8 @@ router.post('/reviews', requireToken ,(req, res, next) => {
 
 //UPDATE
 //PATCH/reviews/:id
-router.patch("/reviews/:reviewId", (req, res, next) => {
-    console.log(req.body)
+router.patch("/reviews/:reviewId", requireToken, (req, res, next) => {
     const bookId = req.body.reviews.bookId
-    console.log(bookId)
     const reviewBody = req.body.reviews
 
     Book.findById(bookId)
@@ -57,7 +55,7 @@ router.patch("/reviews/:reviewId", (req, res, next) => {
 
 //DELETE
 //DELETE/reviews/:reviewId
-router.delete("/reviews/:reviewId", (req, res, next) => {
+router.delete("/reviews/:reviewId", requireToken, (req, res, next) => {
     const bookId = req.body.reviews.bookId
 
     Book.findById(bookId)

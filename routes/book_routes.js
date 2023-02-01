@@ -32,7 +32,7 @@ router.get('/books/:id', requireToken, (req, res, next) => {
 
 // CREATE
 // POST /books
-router.post('/books', (req, res, next) => {
+router.post('/books', requireToken, (req, res, next) => {
 	Book.create(req.body.book)
 		.then((book) => {
 			res.status(201).json({ book: book })
@@ -42,7 +42,7 @@ router.post('/books', (req, res, next) => {
 
 // UPDATE
 // PATCH /books/:id
-router.patch('/books/:id', (req, res, next) => {
+router.patch('/books/:id', requireToken, (req, res, next) => {
 	Book.findById(req.params.id)
 		.then(handle404)
 		.then((book) => {
@@ -54,7 +54,7 @@ router.patch('/books/:id', (req, res, next) => {
 
 // DESTROY
 // DELETE /books/:id
-router.delete('/books/:id', (req, res, next) => {
+router.delete('/books/:id', requireToken, (req, res, next) => {
 	Book.findById(req.params.id)
 		.then(handle404)
 		.then((book) => {
