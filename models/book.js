@@ -21,10 +21,6 @@ const bookSchema = new Schema(
             type: String,
             required: true
         },
-        pageNumber: {
-            type: Number,
-            require: false
-        },
         bookCover: {
             type: String,
             required: false,
